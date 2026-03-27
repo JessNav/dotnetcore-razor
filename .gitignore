@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Razor/Razor.Web/wwwroot/lib
+/Razor/Razor.Web/wwwroot/bootstrap

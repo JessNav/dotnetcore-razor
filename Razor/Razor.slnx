@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="Razor.Data/Razor.Data.csproj" />
+  <Project Path="Razor.Services/Razor.Services.csproj" Id="bebcca1e-fae0-490a-9ab2-56fadb786eb4">
+    <BuildDependency Project="Razor.Data/Razor.Data.csproj" />
+  </Project>
+  <Project Path="Razor.Web/Razor.Web.csproj">
+    <BuildDependency Project="Razor.Services/Razor.Services.csproj" />
+  </Project>
+</Solution>
