@@ -1,0 +1,30 @@
+﻿@page
+@model Razor.Web.Pages.Condo.ListModel
+
+@{
+    ViewData["Title"] = "Condos";
+}
+        
+<h1 class="h4">Condos</h1>
+<p>
+    Check out our condo listing.
+</p>
+<a class="btn btn-secondary" role="button" asp-page="./Create">Add New</a>
+<hr />
+
+@foreach(var condo in Model.Condos)
+{
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">@condo.Name</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">@condo.Address, @condo.City, @condo.State @condo.Zip</h6>
+            <p class="card-text">Units: @condo.NoOfUnits | Year Built: @condo.YearBuilt</p>
+            <p class="card-text">Created: @condo.CreatedDate | Updated: @condo.UpdatedDate</p>
+            <a class="card-link" asp-page="./Edit" asp-route-id="@condo.Id">Edit</a> |
+            <a class="card-link" asp-page="./Details" asp-route-id="@condo.Id">Details</a> |
+            <a class="card-link" asp-page="./Delete" asp-route-id="@condo.Id">Delete</a>
+        </div>
+    </div>
+}
+
+

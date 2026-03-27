@@ -5,9 +5,9 @@ namespace Razor.Pages
 {
     public class IndexModel : PageModel
     {
-        public void OnGet()
+        public RedirectToPageResult OnGet()
         {
-
+            return RedirectToPage("/condo/list");
         }
     }
 }
