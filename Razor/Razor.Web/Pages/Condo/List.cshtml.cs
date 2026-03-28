@@ -6,11 +6,11 @@ namespace Razor.Web.Pages.Condo
 {
     public class ListModel : PageModel
     {
-        private readonly Razor.RazorAptDbContext _context;
+        private readonly RazorAptDbContext _context;
 
         public List<Models.Condo> Condos = new();
 
-        public ListModel(Razor.RazorAptDbContext context)
+        public ListModel(RazorAptDbContext context)
         {
             _context = context;
         }

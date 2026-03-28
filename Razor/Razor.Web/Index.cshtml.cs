@@ -5,16 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using Razor;
 using Razor.Web.Models;
 
 namespace Razor.Web
 {
     public class IndexModel : PageModel
     {
-        private readonly Razor.RazorAptDbContext _context;
+        private readonly RazorAptDbContext _context;
 
-        public IndexModel(Razor.RazorAptDbContext context)
+        public IndexModel(RazorAptDbContext context)
         {
             _context = context;
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Razor.Data.Entities;
 
-namespace Razor;
+namespace Razor.Data;
 
 public partial class RazorAptDbContext : DbContext
 {

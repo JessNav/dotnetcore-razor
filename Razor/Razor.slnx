@@ -3,6 +3,11 @@
   <Project Path="Razor.Services/Razor.Services.csproj" Id="bebcca1e-fae0-490a-9ab2-56fadb786eb4">
     <BuildDependency Project="Razor.Data/Razor.Data.csproj" />
   </Project>
+  <Project Path="Razor.Tests/Razor.Tests.csproj" Id="0db26d55-d2b1-46bf-b89b-f81c4aa93393">
+    <BuildDependency Project="Razor.Data/Razor.Data.csproj" />
+    <BuildDependency Project="Razor.Services/Razor.Services.csproj" />
+    <BuildDependency Project="Razor.Web/Razor.Web.csproj" />
+  </Project>
   <Project Path="Razor.Web/Razor.Web.csproj">
     <BuildDependency Project="Razor.Services/Razor.Services.csproj" />
   </Project>

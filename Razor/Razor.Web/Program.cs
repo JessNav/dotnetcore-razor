@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Authentication.Negotiate;
 using Microsoft.EntityFrameworkCore;
-using Razor;
+using Razor.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +15,13 @@ builder.Services.AddAuthorization(options =>
     options.FallbackPolicy = options.DefaultPolicy;
 });
 builder.Services.AddRazorPages();
+
+// register services from Razor.Services
+builder.Services.AddSingleton<Razor.Services.Mapping.IMapper, Razor.Services.Mapping.SimpleMapper>();
+builder.Services.AddTransient<Razor.Services.CondoService>();
+
+// ensure Razor.Services project is available to the web app
+// (Razor.Services is a project in the solution - if it's not already referenced, add a project reference in the .csproj)
 
 // ADDED
 builder.Services.AddDbContext<RazorAptDbContext>(options =>

@@ -22,4 +22,8 @@
     <Folder Include="wwwroot\lib\bootstrap\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Razor.Services\Razor.Services.csproj" />
+  </ItemGroup>
+
 </Project>
